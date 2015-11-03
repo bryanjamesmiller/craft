@@ -16,10 +16,10 @@ return array(
 	'user' => 'root',
 
 	// The database password to connect with.
-	'password' => '',
+	'password' => 'hH6NKiy9cP',
 
 	// The name of the database to select.
-	'database' => '',
+	'database' => 'crafty_records',
 
 	// The prefix to use when naming tables. This can be no more than 5 characters.
 	'tablePrefix' => 'craft',
