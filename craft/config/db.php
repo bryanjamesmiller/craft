@@ -19,7 +19,7 @@ return array(
 	'password' => '',
 
 	// The name of the database to select.
-	'database' => 'crafty-records',
+	'database' => '',
 
 	// The prefix to use when naming tables. This can be no more than 5 characters.
 	'tablePrefix' => 'craft',
