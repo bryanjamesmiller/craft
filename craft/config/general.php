@@ -8,6 +8,5 @@
  */
 
 return array(
-    'cpTrigger'=>'vinyl',
-    'omitScriptNameInUrls'=>true,
+    
 );
