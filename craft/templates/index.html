@@ -10,7 +10,7 @@
             {%  for slide in entry.homepageSlideshow %}
             <li>
                 <img src="{{ slide.url }}" />
-                <div class="orbit-caption">The Short Summers entertaining a winter audience in Toronto.</div>
+                <div class="orbit-caption">{{ slide.caption }}</div>
             </li>
             {% endfor %}
         </ul>
