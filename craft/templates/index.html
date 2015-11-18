@@ -7,18 +7,12 @@
         <p class="tag">{{  genericContent.tagLine }}</p>
 
         <ul data-orbit>
+            {%  for slide in entry.homepageSlideshow %}
             <li>
-                <img src="a/i/slide-1.jpg" />
+                <img src="{{ slide.url }}" />
                 <div class="orbit-caption">The Short Summers entertaining a winter audience in Toronto.</div>
             </li>
-            <li>
-                <img src="a/i/slide-2.jpg" />
-                <div class="orbit-caption">Asphalt laying down the rock n roll law on NYC's most famous venue.</div>
-            </li>
-            <li>
-                <img src="a/i/slide-3.jpg" />
-                <div class="orbit-caption">Photograph by Daniel Åhs Karlsson</div>
-            </li>
+            {% endfor %}
         </ul>
 
     </div>
