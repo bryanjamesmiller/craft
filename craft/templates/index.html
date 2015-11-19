@@ -42,7 +42,7 @@
 
                 <div class="row">
                     <div class="large-6 columns">
-                        {% for artist in craft.entries.find({section: 'Artists', limit:'4', offset:'4'}) %}
+                        {% for artist in craft.entries.find({section: 'Artists', limit:'4'}) %}
                         <div class="panel">
                             <h5><a href="artist-bio.html">{{ artist.title }}</a></h5>
                             <img class="artist left th" src="http://placehold.it/60x60" />
@@ -50,7 +50,7 @@
                         </div>
                         {% endfor %}
                     <div class="large-6 columns">
-                        {% for artist in craft.entries.find({section: 'Artists', limit:'4'}) %}
+                        {% for artist in craft.entries.find({section: 'Artists', limit:'4', offset:'4'}) %}
                             <div class="panel">
                                 <h5><a href="artist-bio.html">{{ artist.title }}</a></h5>
                                 <img class="artist left th" src="http://placehold.it/60x60" />
