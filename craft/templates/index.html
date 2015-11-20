@@ -45,7 +45,9 @@
                         {% for artist in craft.entries.find({section: 'Artists', limit:'4'}) %}
                             <div class="panel">
                                 <h5><a href="{{ artist.url }}">{{ artist.title }}</a></h5>
-                                <img class="artist left th" src="http://placehold.it/60x60" />
+                                {% for image in artist.artistImage %}
+                                    <img class="artist left th" src="{{ image.getURL('artistThumbnail') }}" />
+                                {% endfor %}
                                 <p>{{ artist.shortBio }} <a href="{{ artist.url }}">Read the bio &rarr;</a></p>
                             </div>
                         {% endfor %}
@@ -54,7 +56,9 @@
                         {% for artist in craft.entries.find({section: 'Artists', limit:'4', offset:'4'}) %}
                             <div class="panel">
                                 <h5><a href="{{ artist.url }}">{{ artist.title }}</a></h5>
-                                <img class="artist left th" src="http://placehold.it/60x60" />
+                                {% for image in artist.artistImage %}
+                                <img class="artist left th" src="{{ image.getURL('artistThumbnail') }}" />
+                                {% endfor %}
                                 <p>{{ artist.shortBio }} <a href="{{ artist.url }}">Read the bio &rarr;</a></p>
                             </div>
                         {% endfor %}
