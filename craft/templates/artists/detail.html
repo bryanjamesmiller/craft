@@ -7,18 +7,11 @@
             </div>
         </div>
         <div class="row main">
-            <div class="large-3 columns">
-                <ul class="side-nav">
-                    <li><a href="/">Home</a></li>
-                    <li class="active"><a href="#">Our Artists</a></li>
-                    <li><a href="#">Our Staff</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">About Crafty Records</a></li>
-                    <li><a href="#">Find our Music</a></li>
-                </ul>
-            </div>
-            <div class="large-9 columns">
-                <img src="/a/i/slide-1.jpg" alt="Men at Lunch" />
+        {% include "includes/_sidenav" %}
+        <div class="large-9 columns">
+            {% for image in entry.artistImage %}
+            <img src="{{ image.getUrl('artistBio') }}" alt="{{ entry.title }}" />
+            {% endfor %}
                 <h3>Men at Lunch</h3>
 
                 <!-- Grid Example -->
@@ -67,9 +60,5 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="large-12 columns">
-                    <p>&copy; 2013 Crafty Records All Rights Reserved. Especially the right to rock your socks off.</p>
-                </div>
-            </div>
+            {% include "includes/_footer" %}
     {% endblock %}
