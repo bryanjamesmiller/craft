@@ -32,28 +32,7 @@
                 <p>Each one hand-selected by our talented A&amp;R department.</p>
 
                 <div class="row">
-                    <div class="large-6 columns">
-                        {% for artist in craft.entries.find({section: 'Artists', limit:'4'}) %}
-                            <div class="panel">
-                                <h5><a href="{{ artist.url }}">{{ artist.title }}</a></h5>
-                                {% for image in artist.artistImage %}
-                                    <img class="artist left th" src="{{ image.getURL('artistThumbnail') }}" />
-                                {% endfor %}
-                                <p>{{ artist.shortBio }} <a href="{{ artist.url }}">Read the bio &rarr;</a></p>
-                            </div>
-                        {% endfor %}
-                    </div>
-                    <div class="large-6 columns">
-                        {% for artist in craft.entries.find({section: 'Artists', limit:'4', offset:'4'}) %}
-                            <div class="panel">
-                                <h5><a href="{{ artist.url }}">{{ artist.title }}</a></h5>
-                                {% for image in artist.artistImage %}
-                                <img class="artist left th" src="{{ image.getURL('artistThumbnail') }}" />
-                                {% endfor %}
-                                <p>{{ artist.shortBio }} <a href="{{ artist.url }}">Read the bio &rarr;</a></p>
-                            </div>
-                        {% endfor %}
-                    </div>
+                    {% include "includes/_gallery.html" %}
                 </div>
             </div>
         </div>
